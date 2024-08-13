@@ -1,0 +1,3 @@
+/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/CMakeFiles/ProgettoLaboratorioProgrammazione.dir
+/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/CMakeFiles/rebuild_cache.dir
