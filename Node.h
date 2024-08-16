@@ -8,9 +8,11 @@ class Node {
 public:
     int x, y;
     float gCost, hCost, fCost;
+    bool isObstacle;
+
     Node* parent;
 
-    Node(int x, int y);
+    Node(int x, int y, bool isObstacle = false);
 
     void calculateHeuristic(const Node& endNode);
 

@@ -5,7 +5,7 @@
 #include "Node.h"
 #include <cmath>
 
-Node::Node(int x, int y): x(x), y(y), gCost(0), hCost(0), fCost(0), parent(nullptr) {}
+Node::Node(int x, int y,bool isObstacle): x(x), y(y), gCost(0), hCost(0), fCost(0), parent(nullptr),isObstacle(isObstacle) {}
 
 void Node::calculateFCost() {
     fCost = gCost + hCost;
