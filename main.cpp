@@ -6,13 +6,19 @@
 bool isNodeInPath(Node* node, const std::vector<Node*>& path) {
     return std::find(path.begin(), path.end(), node) != path.end();
 }
+#include <SFML/Graphics.hpp>
+#include "Grid.h"
+#include "Node.h"
+#include "GameCharacter.h"
+#include "AStar.h"
+
 int main() {
     const int gridWidth = 20;
     const int gridHeight = 20;
     const int cellSize = 32;
 
     // Define obstacles
-    std::vector<std::pair<int, int>> obstacles = {{1, 1}, {2, 2}, {3, 3}, {5, 5}, {7, 8}, {7,14}};
+    std::vector<std::pair<int, int>> obstacles = {{1, 1}, {2, 2}, {3, 3}, {5, 5}, {7, 8}, {7, 14}};
 
     sf::RenderWindow window(sf::VideoMode(gridWidth * cellSize, gridHeight * cellSize), "A* Pathfinding");
 
@@ -24,6 +30,9 @@ int main() {
     std::vector<Node*> path = AStar::findPath(grid, startNode, endNode);
     character.setPath(path);
 
+    sf::Clock clock; // For tracking time
+    const float moveInterval = 1.0f; // Time interval in seconds for moving the character
+
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -31,10 +40,12 @@ int main() {
                 window.close();
         }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+        // Check if it's time to move
+        if (clock.getElapsedTime().asSeconds() >= moveInterval) {
             if (!character.hasReachedDestination()) {
                 character.move();
             }
+            clock.restart(); // Restart the clock after moving
         }
 
         window.clear();
@@ -67,5 +78,3 @@ int main() {
 
     return 0;
 }
-
-

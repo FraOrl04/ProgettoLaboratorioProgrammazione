@@ -47,28 +47,10 @@ cmake_ninja_workdir = /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/
 #############################################
 # Order-only phony target for ProgettoLaboratorioProgrammazione
 
-build cmake_object_order_depends_target_ProgettoLaboratorioProgrammazione: phony || CMakeFiles/ProgettoLaboratorioProgrammazione.dir
+build cmake_object_order_depends_target_ProgettoLaboratorioProgrammazione: phony || cmake_object_order_depends_target_core
 
 build CMakeFiles/ProgettoLaboratorioProgrammazione.dir/main.cpp.o: CXX_COMPILER__ProgettoLaboratorioProgrammazione_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/main.cpp || cmake_object_order_depends_target_ProgettoLaboratorioProgrammazione
   DEP_FILE = CMakeFiles/ProgettoLaboratorioProgrammazione.dir/main.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/ProgettoLaboratorioProgrammazione.dir
-  OBJECT_FILE_DIR = CMakeFiles/ProgettoLaboratorioProgrammazione.dir
-
-build CMakeFiles/ProgettoLaboratorioProgrammazione.dir/Node.cpp.o: CXX_COMPILER__ProgettoLaboratorioProgrammazione_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Node.cpp || cmake_object_order_depends_target_ProgettoLaboratorioProgrammazione
-  DEP_FILE = CMakeFiles/ProgettoLaboratorioProgrammazione.dir/Node.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/ProgettoLaboratorioProgrammazione.dir
-  OBJECT_FILE_DIR = CMakeFiles/ProgettoLaboratorioProgrammazione.dir
-
-build CMakeFiles/ProgettoLaboratorioProgrammazione.dir/Grid.cpp.o: CXX_COMPILER__ProgettoLaboratorioProgrammazione_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Grid.cpp || cmake_object_order_depends_target_ProgettoLaboratorioProgrammazione
-  DEP_FILE = CMakeFiles/ProgettoLaboratorioProgrammazione.dir/Grid.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/ProgettoLaboratorioProgrammazione.dir
-  OBJECT_FILE_DIR = CMakeFiles/ProgettoLaboratorioProgrammazione.dir
-
-build CMakeFiles/ProgettoLaboratorioProgrammazione.dir/GameCharacter.cpp.o: CXX_COMPILER__ProgettoLaboratorioProgrammazione_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/GameCharacter.cpp || cmake_object_order_depends_target_ProgettoLaboratorioProgrammazione
-  DEP_FILE = CMakeFiles/ProgettoLaboratorioProgrammazione.dir/GameCharacter.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/ProgettoLaboratorioProgrammazione.dir
   OBJECT_FILE_DIR = CMakeFiles/ProgettoLaboratorioProgrammazione.dir
@@ -81,14 +63,75 @@ build CMakeFiles/ProgettoLaboratorioProgrammazione.dir/GameCharacter.cpp.o: CXX_
 #############################################
 # Link the executable ProgettoLaboratorioProgrammazione
 
-build ProgettoLaboratorioProgrammazione: CXX_EXECUTABLE_LINKER__ProgettoLaboratorioProgrammazione_Debug CMakeFiles/ProgettoLaboratorioProgrammazione.dir/main.cpp.o CMakeFiles/ProgettoLaboratorioProgrammazione.dir/Node.cpp.o CMakeFiles/ProgettoLaboratorioProgrammazione.dir/Grid.cpp.o CMakeFiles/ProgettoLaboratorioProgrammazione.dir/GameCharacter.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
+build ProgettoLaboratorioProgrammazione: CXX_EXECUTABLE_LINKER__ProgettoLaboratorioProgrammazione_Debug CMakeFiles/ProgettoLaboratorioProgrammazione.dir/main.cpp.o | libcore.a /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 || libcore.a
   FLAGS = -g
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
+  LINK_LIBRARIES = libcore.a  /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
   OBJECT_DIR = CMakeFiles/ProgettoLaboratorioProgrammazione.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = ProgettoLaboratorioProgrammazione
   TARGET_PDB = ProgettoLaboratorioProgrammazione.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target core
+
+
+#############################################
+# Order-only phony target for core
+
+build cmake_object_order_depends_target_core: phony || CMakeFiles/core.dir
+
+build CMakeFiles/core.dir/Node.cpp.o: CXX_COMPILER__core_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Node.cpp || cmake_object_order_depends_target_core
+  DEP_FILE = CMakeFiles/core.dir/Node.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/core.dir
+  OBJECT_FILE_DIR = CMakeFiles/core.dir
+
+build CMakeFiles/core.dir/Grid.cpp.o: CXX_COMPILER__core_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Grid.cpp || cmake_object_order_depends_target_core
+  DEP_FILE = CMakeFiles/core.dir/Grid.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/core.dir
+  OBJECT_FILE_DIR = CMakeFiles/core.dir
+
+build CMakeFiles/core.dir/GameCharacter.cpp.o: CXX_COMPILER__core_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/GameCharacter.cpp || cmake_object_order_depends_target_core
+  DEP_FILE = CMakeFiles/core.dir/GameCharacter.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/core.dir
+  OBJECT_FILE_DIR = CMakeFiles/core.dir
+
+build CMakeFiles/core.dir/Test/Grid_Test.cpp.o: CXX_COMPILER__core_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/Grid_Test.cpp || cmake_object_order_depends_target_core
+  DEP_FILE = CMakeFiles/core.dir/Test/Grid_Test.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/core.dir
+  OBJECT_FILE_DIR = CMakeFiles/core.dir/Test
+
+build CMakeFiles/core.dir/Test/GameCharacter_Test.cpp.o: CXX_COMPILER__core_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/GameCharacter_Test.cpp || cmake_object_order_depends_target_core
+  DEP_FILE = CMakeFiles/core.dir/Test/GameCharacter_Test.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/core.dir
+  OBJECT_FILE_DIR = CMakeFiles/core.dir/Test
+
+build CMakeFiles/core.dir/Test/runAllTests.cpp.o: CXX_COMPILER__core_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/runAllTests.cpp || cmake_object_order_depends_target_core
+  DEP_FILE = CMakeFiles/core.dir/Test/runAllTests.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/core.dir
+  OBJECT_FILE_DIR = CMakeFiles/core.dir/Test
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target core
+
+
+#############################################
+# Link the static library libcore.a
+
+build libcore.a: CXX_STATIC_LIBRARY_LINKER__core_Debug CMakeFiles/core.dir/Node.cpp.o CMakeFiles/core.dir/Grid.cpp.o CMakeFiles/core.dir/GameCharacter.cpp.o CMakeFiles/core.dir/Test/Grid_Test.cpp.o CMakeFiles/core.dir/Test/GameCharacter_Test.cpp.o CMakeFiles/core.dir/Test/runAllTests.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/core.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libcore.a
+  TARGET_PDB = core.a.dbg
 
 
 #############################################
@@ -113,8 +156,539 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target runAstarTest
+
+
+#############################################
+# Order-only phony target for runAstarTest
+
+build cmake_object_order_depends_target_runAstarTest: phony || cmake_object_order_depends_target_core cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build Test/CMakeFiles/runAstarTest.dir/runAllTests.cpp.o: CXX_COMPILER__runAstarTest_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/runAllTests.cpp || cmake_object_order_depends_target_runAstarTest
+  DEP_FILE = Test/CMakeFiles/runAstarTest.dir/runAllTests.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/include -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest
+  OBJECT_DIR = Test/CMakeFiles/runAstarTest.dir
+  OBJECT_FILE_DIR = Test/CMakeFiles/runAstarTest.dir
+
+build Test/CMakeFiles/runAstarTest.dir/GameCharacter_Test.cpp.o: CXX_COMPILER__runAstarTest_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/GameCharacter_Test.cpp || cmake_object_order_depends_target_runAstarTest
+  DEP_FILE = Test/CMakeFiles/runAstarTest.dir/GameCharacter_Test.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/include -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest
+  OBJECT_DIR = Test/CMakeFiles/runAstarTest.dir
+  OBJECT_FILE_DIR = Test/CMakeFiles/runAstarTest.dir
+
+build Test/CMakeFiles/runAstarTest.dir/Grid_Test.cpp.o: CXX_COMPILER__runAstarTest_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/Grid_Test.cpp || cmake_object_order_depends_target_runAstarTest
+  DEP_FILE = Test/CMakeFiles/runAstarTest.dir/Grid_Test.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/include -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest
+  OBJECT_DIR = Test/CMakeFiles/runAstarTest.dir
+  OBJECT_FILE_DIR = Test/CMakeFiles/runAstarTest.dir
+
+build Test/CMakeFiles/runAstarTest.dir/Node_Test.cpp.o: CXX_COMPILER__runAstarTest_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/Node_Test.cpp || cmake_object_order_depends_target_runAstarTest
+  DEP_FILE = Test/CMakeFiles/runAstarTest.dir/Node_Test.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/include -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest
+  OBJECT_DIR = Test/CMakeFiles/runAstarTest.dir
+  OBJECT_FILE_DIR = Test/CMakeFiles/runAstarTest.dir
+
+build Test/CMakeFiles/runAstarTest.dir/Astar_Test.cpp.o: CXX_COMPILER__runAstarTest_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/Astar_Test.cpp || cmake_object_order_depends_target_runAstarTest
+  DEP_FILE = Test/CMakeFiles/runAstarTest.dir/Astar_Test.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/include -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest
+  OBJECT_DIR = Test/CMakeFiles/runAstarTest.dir
+  OBJECT_FILE_DIR = Test/CMakeFiles/runAstarTest.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target runAstarTest
+
+
+#############################################
+# Link the executable Test/runAstarTest
+
+build Test/runAstarTest: CXX_EXECUTABLE_LINKER__runAstarTest_Debug Test/CMakeFiles/runAstarTest.dir/runAllTests.cpp.o Test/CMakeFiles/runAstarTest.dir/GameCharacter_Test.cpp.o Test/CMakeFiles/runAstarTest.dir/Grid_Test.cpp.o Test/CMakeFiles/runAstarTest.dir/Node_Test.cpp.o Test/CMakeFiles/runAstarTest.dir/Astar_Test.cpp.o | lib/libgtest.a lib/libgtest_main.a libcore.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a libcore.a
+  FLAGS = -g
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  libcore.a  lib/libgtest.a
+  OBJECT_DIR = Test/CMakeFiles/runAstarTest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Test/runAstarTest
+  TARGET_PDB = runAstarTest.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Test/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Test/edit_cache: phony Test/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Test/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione -B/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Test/rebuild_cache: phony Test/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build Test/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build Test/CMakeFiles/install.util: CUSTOM_COMMAND Test/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build Test/install: phony Test/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build Test/CMakeFiles/install/local.util: CUSTOM_COMMAND Test/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build Test/install/local: phony Test/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build Test/CMakeFiles/install/strip.util: CUSTOM_COMMAND Test/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build Test/install/strip: phony Test/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build Test/lib/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Test/lib/googletest/edit_cache: phony Test/lib/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Test/lib/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione -B/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/rebuild_cache: phony Test/lib/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build Test/lib/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build Test/lib/googletest/CMakeFiles/install.util: CUSTOM_COMMAND Test/lib/googletest/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/install: phony Test/lib/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build Test/lib/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND Test/lib/googletest/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/install/local: phony Test/lib/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build Test/lib/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND Test/lib/googletest/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/install/strip: phony Test/lib/googletest/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
+
+build Test/lib/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = Test/lib/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock/include -I/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/include -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest
+  OBJECT_DIR = Test/lib/googletest/googlemock/CMakeFiles/gmock.dir
+  OBJECT_FILE_DIR = Test/lib/googletest/googlemock/CMakeFiles/gmock.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib/libgmock.a
+
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug Test/lib/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = Test/lib/googletest/googlemock/CMakeFiles/gmock.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgmock.a
+  TARGET_PDB = gmock.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
+
+build Test/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = Test/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock/include -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/include -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest
+  OBJECT_DIR = Test/lib/googletest/googlemock/CMakeFiles/gmock_main.dir
+  OBJECT_FILE_DIR = Test/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib/libgmock_main.a
+
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug Test/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o || lib/libgmock.a lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = Test/lib/googletest/googlemock/CMakeFiles/gmock_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgmock_main.a
+  TARGET_PDB = gmock_main.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Test/lib/googletest/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googlemock && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Test/lib/googletest/googlemock/edit_cache: phony Test/lib/googletest/googlemock/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Test/lib/googletest/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googlemock && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione -B/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/googlemock/rebuild_cache: phony Test/lib/googletest/googlemock/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build Test/lib/googletest/googlemock/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build Test/lib/googletest/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND Test/lib/googletest/googlemock/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googlemock && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/googlemock/install: phony Test/lib/googletest/googlemock/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build Test/lib/googletest/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND Test/lib/googletest/googlemock/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googlemock && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/googlemock/install/local: phony Test/lib/googletest/googlemock/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build Test/lib/googletest/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND Test/lib/googletest/googlemock/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googlemock && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/googlemock/install/strip: phony Test/lib/googletest/googlemock/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || Test/lib/googletest/googletest/CMakeFiles/gtest.dir
+
+build Test/lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = Test/lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/include -I/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest
+  OBJECT_DIR = Test/lib/googletest/googletest/CMakeFiles/gtest.dir
+  OBJECT_FILE_DIR = Test/lib/googletest/googletest/CMakeFiles/gtest.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib/libgtest.a
+
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug Test/lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = Test/lib/googletest/googletest/CMakeFiles/gtest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgtest.a
+  TARGET_PDB = gtest.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
+
+build Test/lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_unscanned_Debug /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = Test/lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/include -isystem /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest
+  OBJECT_DIR = Test/lib/googletest/googletest/CMakeFiles/gtest_main.dir
+  OBJECT_FILE_DIR = Test/lib/googletest/googletest/CMakeFiles/gtest_main.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib/libgtest_main.a
+
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug Test/lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = Test/lib/googletest/googletest/CMakeFiles/gtest_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgtest_main.a
+  TARGET_PDB = gtest_main.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Test/lib/googletest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googletest && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Test/lib/googletest/googletest/edit_cache: phony Test/lib/googletest/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Test/lib/googletest/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googletest && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione -B/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/googletest/rebuild_cache: phony Test/lib/googletest/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build Test/lib/googletest/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build Test/lib/googletest/googletest/CMakeFiles/install.util: CUSTOM_COMMAND Test/lib/googletest/googletest/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googletest && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/googletest/install: phony Test/lib/googletest/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build Test/lib/googletest/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND Test/lib/googletest/googletest/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googletest && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/googletest/install/local: phony Test/lib/googletest/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build Test/lib/googletest/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND Test/lib/googletest/googletest/all
+  COMMAND = cd /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googletest && /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build Test/lib/googletest/googletest/install/strip: phony Test/lib/googletest/googletest/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
+
+build core: phony libcore.a
+
+build gmock: phony lib/libgmock.a
+
+build gmock_main: phony lib/libgmock_main.a
+
+build gtest: phony lib/libgtest.a
+
+build gtest_main: phony lib/libgtest_main.a
+
+build libgmock.a: phony lib/libgmock.a
+
+build libgmock_main.a: phony lib/libgmock_main.a
+
+build libgtest.a: phony lib/libgtest.a
+
+build libgtest_main.a: phony lib/libgtest_main.a
+
+build runAstarTest: phony Test/runAstarTest
 
 # =============================================================================
 # Folder targets.
@@ -124,7 +698,35 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug
 
-build all: phony ProgettoLaboratorioProgrammazione
+build all: phony ProgettoLaboratorioProgrammazione libcore.a Test/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test
+
+build Test/all: phony Test/runAstarTest Test/lib/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest
+
+build Test/lib/googletest/all: phony Test/lib/googletest/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googlemock
+
+build Test/lib/googletest/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a Test/lib/googletest/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/cmake-build-debug/Test/lib/googletest/googletest
+
+build Test/lib/googletest/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 
 # =============================================================================
 # Built-in targets
@@ -133,14 +735,14 @@ build all: phony ProgettoLaboratorioProgrammazione
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/CMakeLists.txt /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/CMakeLists.txt /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/CMakeLists.txt /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/CMakeLists.txt /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock/CMakeLists.txt /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock/cmake/gmock.pc.in /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock/cmake/gmock_main.pc.in /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/CMakeLists.txt /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/cmake/Config.cmake.in /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/cmake/gtest.pc.in /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/cmake/gtest_main.pc.in /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/cmake/internal_utils.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDependentOption.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPython/Support.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPython3.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/GNUInstallDirs.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/CMakeLists.txt /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/CMakeLists.txt /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/CMakeLists.txt /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/CMakeLists.txt /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock/CMakeLists.txt /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock/cmake/gmock.pc.in /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googlemock/cmake/gmock_main.pc.in /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/CMakeLists.txt /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/cmake/Config.cmake.in /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/cmake/gtest.pc.in /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/cmake/gtest_main.pc.in /home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Test/lib/googletest/googletest/cmake/internal_utils.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDependentOption.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPython/Support.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPython3.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/GNUInstallDirs.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/fra/Scrivania/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################
