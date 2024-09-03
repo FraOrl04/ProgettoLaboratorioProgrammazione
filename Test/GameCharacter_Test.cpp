@@ -6,7 +6,7 @@
 #include  "/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Node.h"
 
 TEST(GameCharacterTest, Initialization) {
-    Node start(0, 0);
+    Node start(0,0);
     GameCharacter character(&start);
 
     EXPECT_EQ(character.getCurrentNode(), &start);
@@ -14,8 +14,8 @@ TEST(GameCharacterTest, Initialization) {
 }
 
 TEST(GameCharacterTest, SetPath) {
-    Node start(0, 0);
-    Node next(1, 1);
+    Node start(0,0);
+    Node next(1,1);
     GameCharacter character(&start);
 
     std::vector<Node*> path = {&start, &next};

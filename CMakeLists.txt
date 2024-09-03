@@ -7,7 +7,6 @@ set(SOURCE_FILES Node.cpp
         Node.h
         Grid.cpp
         Grid.h
-        AStar.h
         GameCharacter.cpp
         GameCharacter.h
         Test/Grid_Test.cpp
