@@ -7,13 +7,19 @@
 #include<algorithm>
 class Grid {
 public:
+    //costruttore griglia che prende in ingresso le dimensioni e gli ostacoli
     Grid(int width, int height, const std::vector<std::pair<int, int>>& obstacles);
-    int width1() const;
-    int height1() const;
-    std::vector<std::vector<Node>>& nodes1(); // Changed to return a reference
-    void set_nodes(const std::vector<std::vector<Node>>& newNodes);
-    std::vector<Node*> getNeighbors(Node& node);
 
+    //metodi getter che restituiscono le dimensioni della griglia
+    int get_width() const;
+    int get_height() const;
+
+    //metodo che permette l'accesso ai nodi e la creazione
+    std::vector<std::vector<Node>>& Access_Node();
+    //metodo che permette l'accesso hai vicini di uno specifico nodo
+    std::vector<Node*> AccesNodeNeigthbors(Node& node);
+    // Funzione per verificare se un nodo è nel percorso
+    bool isNodeInPath(Node* node, const std::vector<Node*>& path) const;
 private:
     int width;
     int height;

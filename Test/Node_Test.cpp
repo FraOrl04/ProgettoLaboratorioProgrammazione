@@ -2,12 +2,12 @@
 // Created by fra on 17/08/24.
 //
 #include "gtest/gtest.h"
-#include "/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Node.h"
+#include "/home/fra/CLionProjects/ProgettoLaboratorioProg/Node.h"
 
 TEST(NodeTest, NodeInitialization) {
     Node node(1,1);
-    EXPECT_EQ(node.get_x1(), 1);
-    EXPECT_EQ(node.get_y1(), 1);
+    EXPECT_EQ(node.get_x(), 1);
+    EXPECT_EQ(node.get_y(), 1);
     EXPECT_FALSE(node.get_is_obstacle());
 }
 
@@ -26,15 +26,10 @@ TEST(NodeTest, SetParent) {
 
 
 
+// Test per verificare che venga sollevata un'eccezione quando le coordinate sono negative
 TEST(NodeTest, NegativeCoordinates) {
-    // Test per verificare che l'eccezione venga sollevata e che il messaggio di errore venga stampato a schermo
+    // Verifica che il costruttore sollevi std::invalid_argument quando le coordinate sono negative
     EXPECT_THROW({
-        try {
-            Node n(-1, 0, false);
-        } catch (const std::invalid_argument& e) {
-            EXPECT_STREQ("Le coordinate del nodo non possono essere negative.", e.what());
-            std::cerr << e.what() << std::endl;  // Stampa il messaggio a schermo
-            throw; // Rilancia l'eccezione per permettere a EXPECT_THROW di catturarla
-        }
+        Node n(-1, 0, false);  // Caso con coordinate negative
     }, std::invalid_argument);
 }

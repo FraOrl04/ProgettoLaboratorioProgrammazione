@@ -1,9 +1,5 @@
 #include <SFML/Graphics.hpp>
 #include "GameCharacter.h"
-// Funzione per verificare se un nodo è nel percorso
-bool isNodeInPath(Node* node, const std::vector<Node*>& path) {
-    return std::find(path.begin(), path.end(), node) != path.end();
-}
 
 
 int main() {
@@ -17,8 +13,8 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(gridWidth * cellSize, gridHeight * cellSize), "A* Pathfinding");
 
     Grid grid(gridWidth, gridHeight, obstacles);
-    Node& startNode = grid.nodes1()[0][0];
-    Node& endNode = grid.nodes1()[gridWidth-1][gridHeight-1]; // Corretto per accedere all'angolo in basso a destra
+    Node& startNode = grid.Access_Node()[0][0];
+    Node& endNode = grid.Access_Node()[gridWidth-1][gridHeight-1]; // Corretto per accedere all'angolo in basso a destra
 
 
     GameCharacter character(&startNode);
@@ -50,7 +46,7 @@ int main() {
                 sf::RectangleShape cell(sf::Vector2f(cellSize - 1, cellSize - 1));
                 cell.setPosition(x * cellSize, y * cellSize);
 
-                Node* currentNode = &grid.nodes1()[x][y];
+                Node* currentNode = &grid.Access_Node()[x][y];
                 sf::Color cellColor = sf::Color::White; // Default color
 
                 if (currentNode->get_is_obstacle()) {
@@ -59,7 +55,7 @@ int main() {
                     cellColor = sf::Color::Green; // Character position
                 } else if (currentNode == &endNode) {
                     cellColor = sf::Color::Red; // End position
-                } else if (isNodeInPath(currentNode, character.getPath())) {
+                } else if (grid.isNodeInPath(currentNode, character.getPath())) {
                     cellColor = sf::Color::White; // Path
                 }
 

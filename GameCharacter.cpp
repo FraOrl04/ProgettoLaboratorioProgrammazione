@@ -28,7 +28,7 @@ Node* GameCharacter::getCurrentNode() const {
     return currentNode;
 }
 
-const std::vector<Node*>& GameCharacter::getPath() const {
+std::vector<Node*> GameCharacter::getPath() const {
     return path;
 }
 //Astar
@@ -54,7 +54,7 @@ std::vector<Node *> GameCharacter::findPath(Grid &grid, Node &startNode, Node &e
 
         closedSet.insert(currentNode);
 
-        for (auto neighbor : grid.getNeighbors(*currentNode)) {
+        for (auto neighbor : grid.AccesNodeNeigthbors(*currentNode)) {
             if (closedSet.find(neighbor) != closedSet.end()) {
                 continue;
             }

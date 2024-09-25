@@ -1,7 +1,7 @@
 #include "Node.h"
 #include <cmath>
 #include <stdexcept>
-Node::Node(int x, int y, bool isObstacle)
+Node::Node(int x, int y, bool isObstacle)//il costruttore lancia un eccezione se le coordinate sono negative
     : x(x), y(y), gCost(0), hCost(0), fCost(0), parent(nullptr), isObstacle(isObstacle) {
     if (x < 0 || y < 0) {
         throw std::invalid_argument("Le coordinate del nodo non possono essere negative.");
@@ -9,11 +9,11 @@ Node::Node(int x, int y, bool isObstacle)
 }
 
 
-int Node::get_x1() const {
+int Node::get_x() const {
     return x;
 }
 
-int Node::get_y1() const {
+int Node::get_y() const {
     return y;
 }
 
@@ -54,7 +54,7 @@ void Node::calculateFCost() {
 }
 
 void Node::calculateL_distance(const Node& endNode) {
-    hCost = std::abs(x - endNode.get_x1()) + std::abs(y - endNode.get_y1());
+    hCost = std::abs(x - endNode.get_x()) + std::abs(y - endNode.get_y());
 }
 
 bool Node::operator<(const Node& other) const {

@@ -2,8 +2,8 @@
 // Created by fra on 17/08/24.
 //
 #include "gtest/gtest.h"
-#include "/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/GameCharacter.h"
-#include  "/home/fra/CLionProjects/ProgettoLaboratorioProgrammazione/Node.h"
+#include "/home/fra/CLionProjects/ProgettoLaboratorioProg/GameCharacter.h"
+#include  "/home/fra/CLionProjects/ProgettoLaboratorioProg/Node.h"
 
 TEST(GameCharacterTest, Initialization) {
     Node start(0,0);
