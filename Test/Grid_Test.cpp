@@ -2,7 +2,7 @@
 // Created by fra on 17/08/24.
 //
 #include "gtest/gtest.h"
-#include "/home/fra/CLionProjects/ProgettoLaboratorioProg/Grid.h"
+#include "../Grid.h"
 
 TEST(GridTest, GridInitialization) {
     std::vector<std::pair<int, int>> obstacles = {{1, 1}, {2, 2}};

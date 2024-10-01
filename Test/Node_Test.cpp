@@ -2,7 +2,7 @@
 // Created by fra on 17/08/24.
 //
 #include "gtest/gtest.h"
-#include "/home/fra/CLionProjects/ProgettoLaboratorioProg/Node.h"
+#include "../Node.h"
 
 TEST(NodeTest, NodeInitialization) {
     Node node(1,1);

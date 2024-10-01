@@ -3,8 +3,7 @@
 //
 #include "../GameCharacter.h"
 #include "gtest/gtest.h"
-#include "/home/fra/CLionProjects/ProgettoLaboratorioProg/Grid.h"
-#include "/home/fra/CLionProjects/ProgettoLaboratorioProg/GameCharacter.h"
+#include "../Grid.h"
 
 
 //test per la ricerca del percorso
