@@ -88,7 +88,7 @@ TEST(AstarTest, minmumPath) {
     int expectedCost = 5; // In una griglia 5x5 senza ostacoli diretti, il percorso (0,0) -> (0,4) è di 5 passi
 
     // Calcola il costo del percorso trovato
-    int actualCost = path.size(); // Il costo è la lunghezza del percorso meno 1 (ogni passo tra i nodi adiacenti ha costo 1)
+    int actualCost = path.size(); // Il costo è la lunghezza del percorso (ogni passo tra i nodi adiacenti ha costo 1)
 
     // Verifica che il costo del percorso trovato sia il minimo
     EXPECT_EQ(actualCost, expectedCost);
