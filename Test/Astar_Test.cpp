@@ -84,13 +84,17 @@ TEST(AstarTest, minmumPath) {
 
     ASSERT_FALSE(path.empty());
 
-    // Calcolo del costo atteso (percorso più breve manualmente determinato)
-    int expectedCost = 5; // In una griglia 5x5 senza ostacoli diretti, il percorso (0,0) -> (0,4) è di 5 passi
+    //percorso ottimale atteso: vettore di cordinate percosros ottimo atteso
+    std::vector<std::pair<int,int>> expectPath = {
+        {0,0}, {0,1}, {0,2},{0,3},{0,4}
+    };
 
-    // Calcola il costo del percorso trovato
-    int actualCost = path.size(); // Il costo è la lunghezza del percorso (ogni passo tra i nodi adiacenti ha costo 1)
+    //verifica che la lunghezza del percorso trovato corrisponde a quella dell'ottimo atteso
+    ASSERT_EQ(path.size(),expectPath.size());
 
-    // Verifica che il costo del percorso trovato sia il minimo
-    EXPECT_EQ(actualCost, expectedCost);
-
-}
+    //verifica che ciascun nodo del percorso trovato corrisponda al nostro percosro ottimo atteso
+    for(size_t i = 0; i < expectPath.size();++i) {
+        //verifica le coordinate di ogni nodo
+        EXPECT_EQ(path[i]->get_x(),expectPath[i].first);
+        EXPECT_EQ(path[i]->get_y(),expectPath[i].second);
+    }
