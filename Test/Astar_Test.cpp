@@ -98,3 +98,4 @@ TEST(AstarTest, minmumPath) {
         EXPECT_EQ(path[i]->get_x(),expectPath[i].first);
         EXPECT_EQ(path[i]->get_y(),expectPath[i].second);
     }
+}
